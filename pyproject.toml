@@ -24,8 +24,11 @@ requires-python = ">=3.11"
 "Documentation" = "https://github.com/equancy/aio-client"
 
 [project.dependencies]
-# Liste des dépendances ici
-# exemple : numpy = ">=1.19.3"
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+azure-storage-blob
 
 [tool.setuptools.packages.find]
 where = ["aio-client"]
