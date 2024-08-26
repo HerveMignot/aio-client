@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools >= 58.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aio-client"
+version = "0.1.0"
+description = "Adobe IO API Python Client"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    { name = "Equancy", email = "contact@equancy.com" }
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    # "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.11"
+
+[project.urls]
+"Homepage" = "https://github.com/equancy/aio-client"
+"Documentation" = "https://github.com/equancy/aio-client"
+
+[project.dependencies]
+# Liste des dépendances ici
+# exemple : numpy = ">=1.19.3"
+
+[tool.setuptools.packages.find]
+where = ["aio-client"]
+
+[tool.setuptools.entry_points]
+console_scripts = [
+    # Si vous avez des scripts à rendre exécutables
+    # 'nom_du_script = monpackage.module:fonction'
+]
