@@ -1,9 +1,10 @@
 [build-system]
-requires = ["setuptools >= 58.0"]
+requires = ["setuptools >= 62.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "aio-client"
+name = "aio_client"
+dynamic = ["dependencies", "optional-dependencies"]
 version = "0.1.0"
 description = "Adobe IO API Python Client"
 readme = "README.md"
@@ -11,7 +12,6 @@ license = {file = "LICENSE"}
 authors = [
     { name = "Equancy", email = "contact@equancy.com" }
 ]
-
 classifiers = [
     "Programming Language :: Python :: 3",
     # "License :: OSI Approved :: MIT License",
@@ -19,22 +19,12 @@ classifiers = [
 ]
 requires-python = ">=3.11"
 
+[tool.setuptools]
+packages = ["adobe_client"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
 [project.urls]
 "Homepage" = "https://github.com/equancy/aio-client"
 "Documentation" = "https://github.com/equancy/aio-client"
-
-[project.dependencies]
-google-api-python-client
-google-auth
-google-auth-oauthlib
-google-auth-httplib2
-azure-storage-blob
-
-[tool.setuptools.packages.find]
-where = ["aio-client"]
-
-[tool.setuptools.entry_points]
-console_scripts = [
-    # Si vous avez des scripts à rendre exécutables
-    # 'nom_du_script = monpackage.module:fonction'
-]
