@@ -4,7 +4,6 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aio_client"
-dynamic = ["dependencies", "optional-dependencies"]
 version = "0.1.0"
 description = "Adobe IO API Python Client"
 readme = "README.md"
@@ -18,12 +17,15 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 requires-python = ">=3.11"
+dependencies = [
+  "httpx",
+  "gidgethub[httpx]>4.0.0",
+  "django>2.1; os_name != 'nt'",
+  "django>2.0; os_name == 'nt'",
+]
 
 [tool.setuptools]
 packages = ["adobe_client"]
-
-[tool.setuptools.dynamic]
-dependencies = {file = ["requirements.txt"]}
 
 [project.urls]
 "Homepage" = "https://github.com/equancy/aio-client"
