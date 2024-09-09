@@ -26,7 +26,8 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["adobe_client"]
+#packages = ["adobe_client"]
+package-dir = {"" = "adobe_client"}
 
 [project.urls]
 "Homepage" = "https://github.com/equancy/aio-client"
