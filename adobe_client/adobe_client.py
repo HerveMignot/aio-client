@@ -2,7 +2,7 @@ import datetime
 import requests
 import time
 
-from constants import Storage, Colorspace, CreateMaskType, MimeType
+from adobe_client.constants import Storage, Colorspace, CreateMaskType, MimeType
 from typing import Self
 
 
