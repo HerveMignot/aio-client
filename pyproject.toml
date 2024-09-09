@@ -18,16 +18,16 @@ classifiers = [
 ]
 requires-python = ">=3.11"
 dependencies = [
+    "azure-storage-blob",
     "google-api-python-client",
     "google-auth",
     "google-auth-oauthlib",
     "google-auth-httplib2",
-    "azure-storage-blob",
+    "google-cloud-storage",
 ]
 
 [tool.setuptools]
-#packages = ["adobe_client"]
-package-dir = {"" = "adobe_client"}
+packages = ["adobe_client"]
 
 [project.urls]
 "Homepage" = "https://github.com/equancy/aio-client"
